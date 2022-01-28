@@ -1,17 +1,17 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Your Madlib</title>
-</head>
-  <body>
-    <h1>Madlibs</h1>
-    <form action="/story">
-        {% for prompt in prompts %}
-        <p>{{prompt}}:
-            <input name="{{prompt}}"/>
-        </p>
-        {% endfor %}
-      <button>Go!</button>
-    </form>
-  </body>
-</html>
+{% extends 'base.html' %}
+
+{% block title %}Create A Madlib{% endblock %}
+
+{% block content %}
+
+<h1>Madlibs</h1>
+<form action="/story">
+    {% for prompt in prompts %}
+    <p>{{prompt}}:
+        <input name="{{prompt}}"/>
+    </p>
+    {% endfor %}
+  <button>Go!</button>
+</form>
+
+{% endblock %}

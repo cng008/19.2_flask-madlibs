@@ -1,11 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Your Madlib</title>
-</head>
-<body>
-    <h1>Your Madlib</h1>
-    <p>{{text}}</p>
+{% extends 'base.html' %}
 
-</body>
-</html>
+{% block title %}Your Madlib{% endblock %}
+
+{% block content %}
+
+<h1>Your Madlib</h1>
+<p>{{text}}</p>
+
+{% endblock %}
